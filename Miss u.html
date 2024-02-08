@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forgive me</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #324955; /* verde petrolio */
+        color: #f2e9e4; /* bianco crema */
+        font-size: 18px;
+        line-height: 1.6;
+        padding: 20px;
+        text-align: center;
+    }
+    h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+    #poetry {
+        margin-top: 20px;
+    }
+    #buttons {
+        margin-top: 20px;
+    }
+    #response {
+        display: none;
+        margin-top: 20px;
+    }
+    button {
+        font-size: 24px;
+        padding: 10px 20px;
+        margin: 10px;
+    }
+</style>
+</head>
+<body>
+    <h1>Forgive me</h1>
+    <img src="Amanti.jpg" alt="Magritte's Lovers">
+    <div id="poetry">
+        <p id="poem">
+            Voglio che sappia<br>
+            una cosa.<br><br>
+
+            Tu sai com'è questo:<br>
+            se guardo<br>
+            la luna di cristallo, il ramo rosso<br>
+            del lento autunno alla mia finestra,<br>
+            se tocco<br>
+            vicino al fuoco<br>
+            l'impalpabile cenere<br>
+            o il rugoso corpo della legna,<br>
+            tutto mi conduce a te,<br>
+            come se ciò che esiste,<br>
+            aromi, luce, metalli,<br>
+            fossero piccole navi che vanno<br>
+            verso le tue isole che m'attendono.<br><br>
+
+            Orbene,<br>
+            se a poco a poco cessi di amarmi<br>
+            cesserò d'amarti a poco a poco.<br>
+            Se d'improvviso<br>
+            mi dimentichi,<br>
+            non cercarmi,<br>
+            ché già ti avrò dimenticata.<br><br>
+
+            Se consideri lungo e pazzo<br>
+            il vento di bandiere<br>
+            che passa per la mia vita<br>
+            e ti decidi<br>
+            a lasciarmi alla riva<br>
+            del cuore in cui affondo le radici,<br>
+            pensa<br>
+            che in quel giorno,<br>
+            in quell'ora,<br>
+            leverò in alto le braccia<br>
+            e le mie radici usciranno<br>
+            a cercare altra terra.<br><br>
+
+            Ma<br>
+            se ogni giorno,<br>
+            ogni ora<br>
+            senti che a me sei destinata<br>
+            con dolcezza implacabile.<br>
+            Se ogni giorno sale<br>
+            alle tue labbra un fiore a cercarmi,<br>
+            ahi, amor mio, ahi mia,<br>
+            in me tutto quel fuoco si ripete,<br>
+            in me nulla si spegne n‚ si oblia,<br>
+            il mio amore si nutre del tuo amore, amata,<br>
+            e finché tu vivrai starà tra le tue braccia<br>
+            senza uscir dalle mie.<br>
+        </p>
+    </div>
+    <div id="buttons">
+        <button onclick="forgive()" style="font-size: 30px;">Perdonami</button>
+        <button onclick="dontForgive()" style="font-size: 30px;">Non perdonarmi</button>
+    </div>
+    <div id="response">
+        <p id="responseText" style="font-size: 24px;"></p>
+    </div>
+
+    <script>
+        function forgive() {
+            alert("Grazie per il perdono!");
+        }
+
+        function dontForgive() {
+            var response = document.getElementById("response");
+            var responseText = document.getElementById("responseText");
+            responseText.innerHTML = "So che non me lo merito, ma dammi un'ultima occasione.";
+            response.style.display = "block";
+            document.getElementById("poetry").style.display = "none";
+            document.getElementById("buttons").style.display = "none";
+        }
+    </script>
+</body>
+</html>
